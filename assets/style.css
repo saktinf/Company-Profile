@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    overflow: auto;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    background-color: #00bcd4;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.logo {
+    color: White;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+}
+
+.navMenu {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navMenu input {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    opacity: 0;
+    left: -7.5px;
+    top: -5px;
+    cursor: pointer;
+}
+
+.navMenu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.navMenu span:last-child {
+    transform-origin: 0 100%;
+}
+
+.navMenu span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.navMenu input:checked ~ span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.navMenu input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.navMenu input:checked ~ span:last-child {
+    transform: rotate(-45deg);
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-area {
+    display: flex;
+    height: auto;
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.featured-img {
+    width: 50%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+}
+
+.display-text {
+    margin: 60px 45px 55px;
+}
+
+.display-text span {
+    display: inline-block;
+    height: 5px;
+    width: 100px;
+    background-color: #00acc1;
+    margin: 10px 0 10px 0;
+}
+
+.display-text h1 {
+    color: #26c6da;
+    font-weight: 600;
+    font-size: 36px;
+    margin: 0 0 15px;
+}
+
+.display-text h3 {
+    color: #4dd0e1;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0 0 30px 0;
+}
+
+.display-text h2 {
+    text-align: center;
+    color: #00acc1;
+    margin: 10px 0 10px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-area {
+    display: flex;
+    height: auto;
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    border: 3px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    transition: .3s;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.box:nth-child(1) .img-box {
+    background-image: url(images/services/public-cloud.png);
+}
+
+.box:nth-child(2) .img-box {
+    background-image: url(images/services/private-cloud.png);
+}
+
+.box:nth-child(3) .img-box {
+    background-image: url(images/services/hybrid-cloud.png);
+}
+
+.header-text {
+    font-size: 25px
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.img-box {
+    padding-top: 20px;
+}
+
+.img-text p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.box:hover {
+    background-color: #00bcd4;
+    color: white;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #00bcd4;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #80deea;
+}
+
+footer {
+    display: flex;
+    height: 50px;
+    color: white;
+    background-color: #00bcd4;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+th {
+    float: left;
+    color: #00acc1;
+    padding: 0 35px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 40%;
+    }
+    .banner-area {
+        width: 100%;
+        flex-direction: column;
+    }
+    .featured-img {
+        width: 100%;
+        height: 320px;
+    }
+    .banner-text {
+        margin: 15px 60px;
+        max-width: 660px;
+    }
+    .container-area {
+        width: 100%;
+        flex-direction: column;
+    }
+    .about-img {
+        width: 360px;
+        height: 420px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navMenu {
+        display: flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 80%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #00bcd4;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
